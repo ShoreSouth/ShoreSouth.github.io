@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Shore</title>
+  
+  
+  <link href="https://shoresouth.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://shoresouth.github.io/"/>
+  <updated>2022-05-04T11:57:47.198Z</updated>
+  <id>https://shoresouth.github.io/</id>
+  
+  <author>
+    <name>岸南</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Markdown写作</title>
+    <link href="https://shoresouth.github.io/2022/05/04/markdown-shi-yong/"/>
+    <id>https://shoresouth.github.io/2022/05/04/markdown-shi-yong/</id>
+    <published>2022-05-04T11:53:20.000Z</published>
+    <updated>2022-05-04T11:57:47.198Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;为什么要写作，为什么要发表？&quot;&gt;&lt;a href=&quot;#为什么要写作，为什么要发表？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="随笔" scheme="https://shoresouth.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="markdown" scheme="https://shoresouth.github.io/tags/markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo+github————个人博客搭建</title>
+    <link href="https://shoresouth.github.io/2022/05/04/ge-ren-bo-ke-da-jian/"/>
+    <id>https://shoresouth.github.io/2022/05/04/ge-ren-bo-ke-da-jian/</id>
+    <published>2022-05-04T03:22:20.000Z</published>
+    <updated>2022-05-04T11:55:40.183Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本人博客：&lt;a href=&quot;https://shoresouth.github.io/&quot;&gt;https://shoresouth.github.io/&lt;/a&gt;&lt;br&gt;Hexo是一款基于Node.js的静态博客框架，依赖少易于安装使用，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="建站" scheme="https://shoresouth.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+    <category term="hexo" scheme="https://shoresouth.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
