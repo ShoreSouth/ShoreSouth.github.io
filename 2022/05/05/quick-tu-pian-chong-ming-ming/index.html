@@ -4,8 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="books, hexo,开发,算法">
-    <meta name="description" content="Shore">
+    <meta name="keywords" content="图片重命名">
+    <meta name="description" content="一般文件夹里的图片都会自动生成后缀，图片很多的时候，每一个图片都重命名显然很不现实。因此，考虑结合windows的批处理命令实现自动重命名。
+
+随便单击一张图片，然后Ctrl+A就可以全选图片，选择第一个图片然后右键选择“重命名”
+
+不输入">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,7 +32,7 @@
     </style>
 
 
-    <title>books | Shore</title>
+    <title>QUICK——图片重命名 | Shore</title>
     <link rel="icon" type="image/png" href="/shoresouth/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/shoresouth/libs/awesome/css/all.min.css">
@@ -406,12 +410,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/shoresouth/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/shoresouth/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">books</h1>
+                    <h1 class="description center-align post-title">QUICK——图片重命名</h1>
                 </div>
             </div>
         </div>
@@ -525,12 +529,29 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/shoresouth/tags/QUICK/">
+                                <span class="chip bg-color">QUICK</span>
+                            </a>
+                        
+                            <a href="/shoresouth/tags/WIN10/">
+                                <span class="chip bg-color">WIN10</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/shoresouth/categories/QUICK/" class="post-category">
+                                QUICK
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -539,7 +560,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2022-05-04
+                    2022-05-05
                 </div>
                 
 
@@ -548,7 +569,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    7
+                    248
                 </div>
                 
 
@@ -568,7 +589,28 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>这里应该干什么</p>
+                <p>一般文件夹里的图片都会自动生成后缀，图片很多的时候，每一个图片都重命名显然很不现实。因此，考虑结合windows的批处理命令实现自动重命名。</p>
+<ul>
+<li><p>随便单击一张图片，然后Ctrl+A就可以全选图片，选择第一个图片然后右键选择“重命名”</p>
+</li>
+<li><p>不输入任何字符，直接回车，你会发现所有图片的名字变成了（1） （2）（3）（4），带有括号的图片名称</p>
+</li>
+<li><p>接下来就是去除括号，去除括号的代码如下</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">@Echo Off<span class="token important">&amp;SetLocal</span> ENABLEDELAYEDEXPANSION
+FOR %%a in (<span class="token important">*)</span> do (
+set "name=%%a"
+set "name=<span class="token tag">!name:(=</span><span class="token tag">!</span>"
+set "name=<span class="token tag">!name:)=</span><span class="token tag">!</span>"
+ren "%%a" "<span class="token tag">!name</span><span class="token tag">!</span>"
+)
+exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li><p>在图片的文件夹里设置，需要除括号的文件夹里新建一个文本文档，双击打开，输入以上代码。</p>
+</li>
+<li><p>保存关闭文本文档，把文本文档的后缀改成 .bat</p>
+</li>
+<li><p>双击 .bat文件，文件内所有的括号就都被去除了</p>
+</li>
+</ul>
 
                 
             </div>
@@ -595,7 +637,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://shore_south.gitee.io/shoresouth/shoresouth/books/index.html">https://shore_south.gitee.io/shoresouth/shoresouth/books/index.html</a>
+                    <a href="https://shore_south.gitee.io/shoresouth/shoresouth/2022/05/05/quick-tu-pian-chong-ming-ming/">https://shore_south.gitee.io/shoresouth/shoresouth/2022/05/05/quick-tu-pian-chong-ming-ming/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -632,7 +674,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/shoresouth/tags/QUICK/">
+                                    <span class="chip bg-color">QUICK</span>
+                                </a>
+                            
+                                <a href="/shoresouth/tags/WIN10/">
+                                    <span class="chip bg-color">WIN10</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -809,13 +859,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/shoresouth/books/index.html">
+                <a href="/shoresouth/2022/05/05/quick-tu-pian-chong-ming-ming/">
                     <div class="card-image">
                         
                         
-                        <img src="/shoresouth/medias/featureimages/2.jpg" class="responsive-img" alt="books">
+                        <img src="/shoresouth/medias/featureimages/7.jpg" class="responsive-img" alt="QUICK——图片重命名">
                         
-                        <span class="card-title">books</span>
+                        <span class="card-title">QUICK——图片重命名</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -826,17 +876,33 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-05
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            岸南
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/shoresouth/categories/QUICK/" class="post-category">
+                                    QUICK
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/shoresouth/tags/QUICK/">
+                        <span class="chip bg-color">QUICK</span>
+                    </a>
+                    
+                    <a href="/shoresouth/tags/WIN10/">
+                        <span class="chip bg-color">WIN10</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -844,37 +910,48 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/shoresouth/books/index.html">
+                <a href="/shoresouth/2022/05/05/hexo-zhu-ti-you-hua-mei-hua-bu-ju/">
                     <div class="card-image">
                         
                         
-                        <img src="/shoresouth/medias/featureimages/2.jpg" class="responsive-img" alt="books">
+                        <img src="/shoresouth/medias/featureimages/4.jpg" class="responsive-img" alt="hexo主题优化————美化布局">
                         
-                        <span class="card-title">books</span>
+                        <span class="card-title">hexo主题优化————美化布局</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            主题个性化的一些配置，主要修改页面颜色、样式、布局等。以matery为例。matery主题下载：matery
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-05
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            岸南
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/shoresouth/categories/%E5%BB%BA%E7%AB%99/" class="post-category">
+                                    建站
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/shoresouth/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

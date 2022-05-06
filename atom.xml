@@ -3,11 +3,11 @@
   <title>Shore</title>
   
   
-  <link href="https://shoresouth.github.io/atom.xml" rel="self"/>
+  <link href="https://shore_south.gitee.io/shoresouth/atom.xml" rel="self"/>
   
-  <link href="https://shoresouth.github.io/"/>
-  <updated>2022-05-04T11:57:47.198Z</updated>
-  <id>https://shoresouth.github.io/</id>
+  <link href="https://shore_south.gitee.io/shoresouth/"/>
+  <updated>2022-05-05T13:55:51.054Z</updated>
+  <id>https://shore_south.gitee.io/shoresouth/</id>
   
   <author>
     <name>岸南</name>
@@ -17,9 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>QUICK——图片重命名</title>
+    <link href="https://shore_south.gitee.io/shoresouth/2022/05/05/quick-tu-pian-chong-ming-ming/"/>
+    <id>https://shore_south.gitee.io/shoresouth/2022/05/05/quick-tu-pian-chong-ming-ming/</id>
+    <published>2022-05-05T12:33:57.000Z</published>
+    <updated>2022-05-05T13:55:51.054Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一般文件夹里的图片都会自动生成后缀，图片很多的时候，每一个图片都重命名显然很不现实。因此，考虑结合windows的批处理命令实现自动重命名。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;随便单击一张图片，然后Ctrl+A就可以全选图片，选择第一个图片然后右键选择“重命名”&lt;/p&gt;
+&lt;/</summary>
+        
+      
+    
+    
+    
+    <category term="QUICK" scheme="https://shore_south.gitee.io/shoresouth/categories/QUICK/"/>
+    
+    
+    <category term="QUICK" scheme="https://shore_south.gitee.io/shoresouth/tags/QUICK/"/>
+    
+    <category term="WIN10" scheme="https://shore_south.gitee.io/shoresouth/tags/WIN10/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo主题优化————美化布局</title>
+    <link href="https://shore_south.gitee.io/shoresouth/2022/05/05/hexo-zhu-ti-you-hua-mei-hua-bu-ju/"/>
+    <id>https://shore_south.gitee.io/shoresouth/2022/05/05/hexo-zhu-ti-you-hua-mei-hua-bu-ju/</id>
+    <published>2022-05-05T09:18:24.000Z</published>
+    <updated>2022-05-06T06:41:26.854Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;主题个性化的一些配置，主要修改页面颜色、样式、布局等。以matery为例。&lt;br&gt;matery主题下载：&lt;a href=&quot;https://github.com/blinkfox/hexo-theme-matery&quot;&gt;matery&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="建站" scheme="https://shore_south.gitee.io/shoresouth/categories/%E5%BB%BA%E7%AB%99/"/>
+    
+    
+    <category term="hexo" scheme="https://shore_south.gitee.io/shoresouth/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用Markdown写作</title>
-    <link href="https://shoresouth.github.io/2022/05/04/markdown-shi-yong/"/>
-    <id>https://shoresouth.github.io/2022/05/04/markdown-shi-yong/</id>
+    <link href="https://shore_south.gitee.io/shoresouth/2022/05/04/markdown-shi-yong/"/>
+    <id>https://shore_south.gitee.io/shoresouth/2022/05/04/markdown-shi-yong/</id>
     <published>2022-05-04T11:53:20.000Z</published>
     <updated>2022-05-04T11:57:47.198Z</updated>
     
@@ -34,17 +83,17 @@
     
     
     
-    <category term="随笔" scheme="https://shoresouth.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://shore_south.gitee.io/shoresouth/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="markdown" scheme="https://shoresouth.github.io/tags/markdown/"/>
+    <category term="markdown" scheme="https://shore_south.gitee.io/shoresouth/tags/markdown/"/>
     
   </entry>
   
   <entry>
     <title>hexo+github————个人博客搭建</title>
-    <link href="https://shoresouth.github.io/2022/05/04/ge-ren-bo-ke-da-jian/"/>
-    <id>https://shoresouth.github.io/2022/05/04/ge-ren-bo-ke-da-jian/</id>
+    <link href="https://shore_south.gitee.io/shoresouth/2022/05/04/ge-ren-bo-ke-da-jian/"/>
+    <id>https://shore_south.gitee.io/shoresouth/2022/05/04/ge-ren-bo-ke-da-jian/</id>
     <published>2022-05-04T03:22:20.000Z</published>
     <updated>2022-05-04T11:55:40.183Z</updated>
     
@@ -53,10 +102,10 @@
     
     
     
-    <category term="建站" scheme="https://shoresouth.github.io/categories/%E5%BB%BA%E7%AB%99/"/>
+    <category term="建站" scheme="https://shore_south.gitee.io/shoresouth/categories/%E5%BB%BA%E7%AB%99/"/>
     
     
-    <category term="hexo" scheme="https://shoresouth.github.io/tags/hexo/"/>
+    <category term="hexo" scheme="https://shore_south.gitee.io/shoresouth/tags/hexo/"/>
     
   </entry>
   
