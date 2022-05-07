@@ -6,7 +6,7 @@
   <link href="https://shoresouth.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://shoresouth.gitee.io/"/>
-  <updated>2022-05-05T13:55:51.054Z</updated>
+  <updated>2022-05-07T07:16:48.613Z</updated>
   <id>https://shoresouth.gitee.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo主题优化——加速访问</title>
+    <link href="https://shoresouth.gitee.io/2022/05/07/hexo-zhu-ti-you-hua-jia-su-fang-wen/"/>
+    <id>https://shoresouth.gitee.io/2022/05/07/hexo-zhu-ti-you-hua-jia-su-fang-wen/</id>
+    <published>2022-05-07T07:16:48.000Z</published>
+    <updated>2022-05-07T07:16:48.613Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DL_LHY21_01_Regression_P1</title>
+    <link href="https://shoresouth.gitee.io/2022/05/07/dl-lhy21-01-regression-p1/"/>
+    <id>https://shoresouth.gitee.io/2022/05/07/dl-lhy21-01-regression-p1/</id>
+    <published>2022-05-07T03:55:01.000Z</published>
+    <updated>2022-05-07T07:49:47.983Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Regression&quot;&gt;&lt;a href=&quot;#Regression&quot; class=&quot;headerlink&quot; title=&quot;Regression&quot;&gt;&lt;/a&gt;Regression&lt;/h1&gt;&lt;h2 id=&quot;Machine-Learning&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://shoresouth.gitee.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://shoresouth.gitee.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>QUICK——图片重命名</title>
