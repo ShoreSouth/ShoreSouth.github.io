@@ -4,8 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo主题优化——加速访问, hexo,开发,算法">
-    <meta name="description" content="">
+    <meta name="keywords" content="hexo,matery,加速">
+    <meta name="description" content="参考博文：Hexo进阶之各种优化
+访问速度优化图片加载优化预加载：进入项目前提前加载资源，避免在项目中加载缓慢，影响用户体验。
+
+缺点：增加服务器压力
+
+懒加载：当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载。
+
+优点：对服务">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -410,7 +417,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -529,12 +536,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/hexo/" class="post-category">
+                                hexo
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -552,7 +572,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    724
                 </div>
                 
 
@@ -572,7 +592,59 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p>参考博文：<a target="_blank" rel="noopener" href="https://blog.sky03.cn/posts/42790.html#toc-heading-17">Hexo进阶之各种优化</a></p>
+<h3 id="访问速度优化"><a href="#访问速度优化" class="headerlink" title="访问速度优化"></a>访问速度优化</h3><h4 id="图片加载优化"><a href="#图片加载优化" class="headerlink" title="图片加载优化"></a>图片加载优化</h4><p>预加载：进入项目前提前加载资源，避免在项目中加载缓慢，影响用户体验。</p>
+<ul>
+<li>缺点：增加服务器压力</li>
+</ul>
+<p>懒加载：当图片滚动进可视窗口内才加载图片，可视窗口之外的图片则不加载。</p>
+<ul>
+<li>优点：对服务器有一定的缓解压力作用</li>
+</ul>
+<p>我用的 <a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">matery主题</a> 整体采用预加载模式，这样可以在我们访问其他页面的时候会稍微快点。我们可以在这个基础上对图片进行懒加载，这样做效果就是html、css、js加载之后，图片再加载。既保证了网页的打开速度，也不会因图片的庞大体积而拖累了整个页面的加载。<br>具体步骤如下：</p>
+<ul>
+<li><p>首先安装图片懒加载插件： <code>hexo-lazyload-image</code><br>hexo根目录：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml">npm install hexo<span class="token punctuation">-</span>lazyload<span class="token punctuation">-</span>image <span class="token punctuation">-</span><span class="token punctuation">-</span>save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
+<li><p>根目录<code>_config.yml</code>末尾加以下代码：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">lazyload</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> 
+  <span class="token key atrule">onlypost</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>  <span class="token comment"># 是否只对文章的图片做懒加载</span>
+  <span class="token key atrule">loadingImg</span><span class="token punctuation">:</span> <span class="token comment"># eg ./images/loading.gif</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>到这里就配置完了，执行<code>hexo cl&amp;&amp;hexo g&amp;&amp;hexo s</code>就有效果了，以后博客上的图片就都是懒加载了，以上步骤理论上任何主题都可以用。<br>一般情况下懒加载会和gallery插件会发生冲突，结果可能就是点开图片，左翻右翻都是loading image。matery主题的解决方案是：</p>
+</li>
+<li><p>修改 <code>/themes/matery/source/js/matery.js</code> 文件</p>
+</li>
+</ul>
+<p>在第108行加上：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'img[data-original]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"href"</span><span class="token punctuation">,</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"data-original"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>做完这步之后，还有点小Bug，首页的logo点击会直接打开logo图，而不是跳到首页。</p>
+<p>伪解决方案：</p>
+<ul>
+<li>打开 <code>/themes/matery/layout/_partial/header.ejs</code>文件，在img和span的两个头加个div：<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>brand-logo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;%- url_for() %&gt;<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>waves-effect waves-light<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+            &lt;% if (theme.logo !== undefined &amp;&amp; theme.logo.length &gt; 0) { %&gt;
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;%= theme.logo %&gt;<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>logo-img<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>LOGO<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+            &lt;% } %&gt;
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>logo-span<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>&lt;%- config.title %&gt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>懒加载优化（选做）<blockquote>
+<p>经过以上操作就已经很完美了，以下内容可做可不做</p>
+</blockquote>
+</li>
+</ul>
+<p>其实第一次加载后本地都是有缓存的，如果每次都把loading显示出来就不那么好看。<br>所以我们需要对插件进行魔改，让图片稍微提前加载，避开加载动画。<br>打开 Hexo根目录<code>&gt;node_modules &gt; hexo-lazyload-image &gt; lib &gt; simple-lazyload.js</code> 文件。<br>第9行修改为：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&amp;&amp;</span> rect<span class="token punctuation">.</span>top <span class="token operator">&lt;=</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>innerHeight <span class="token operator">+</span><span class="token number">240</span> <span class="token operator">||</span> document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>clientHeight <span class="token operator">+</span><span class="token number">240</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="自定义加载图片"><a href="#自定义加载图片" class="headerlink" title="自定义加载图片"></a>自定义加载图片</h4><p><code>hexo-lazyload-image</code> 插件提供了自定义loading图片的选项。</p>
+<p> <code>loadingImg</code> 后配置图片的路径。<br> </p><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">lazyload</span><span class="token punctuation">:</span>
+ <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> 
+ <span class="token key atrule">onlypost</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>  <span class="token comment"># 是否只对文章的图片做懒加载</span>
+ <span class="token key atrule">loadingImg</span><span class="token punctuation">:</span> /medias/loading.gif <span class="token comment"># eg ./images/loading.gif</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p></p>
+
                 
             </div>
             <hr/>
@@ -635,7 +707,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -816,7 +892,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/comment_bg.png" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="hexo主题优化——加速访问">
+                        <img src="/medias/comment_bg.png" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="hexo主题优化——加速访问">
                         
                         <span class="card-title">hexo主题优化——加速访问</span>
                     </div>
@@ -833,13 +909,25 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            岸南
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -854,7 +942,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/comment_bg.png" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="QUICK——图片重命名">
+                        <img src="/medias/comment_bg.png" data-original="/medias/featureimages/20.jpg" class="responsive-img" alt="QUICK——图片重命名">
                         
                         <span class="card-title">QUICK——图片重命名</span>
                     </div>
