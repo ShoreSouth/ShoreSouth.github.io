@@ -6,7 +6,7 @@
   <link href="https://shoresouth.github.io/atom.xml" rel="self"/>
   
   <link href="https://shoresouth.github.io/"/>
-  <updated>2022-05-07T12:49:51.778Z</updated>
+  <updated>2022-05-09T07:16:03.016Z</updated>
   <id>https://shoresouth.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>批量压缩图片</title>
+    <link href="https://shoresouth.github.io/2022/05/09/pi-liang-ya-suo-tu-pian/"/>
+    <id>https://shoresouth.github.io/2022/05/09/pi-liang-ya-suo-tu-pian/</id>
+    <published>2022-05-09T06:56:03.000Z</published>
+    <updated>2022-05-09T07:16:03.016Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h3&gt;&lt;p&gt;gitee和github图床存储的图片不能超过1MB(免费用还要啥自行车呀)&lt;/p&gt;
+&lt;h3 id=&quot;python代码&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="QUICK" scheme="https://shoresouth.github.io/categories/QUICK/"/>
+    
+    
+    <category term="QUICK" scheme="https://shoresouth.github.io/tags/QUICK/"/>
+    
+    <category term="python" scheme="https://shoresouth.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo主题优化——加速访问</title>
