@@ -1238,10 +1238,11 @@ td {
 }
 **/
 
-table tr:nth-child(2n),
+/* 自己的改动 去掉奇偶样式变动 */
+/* table tr:nth-child(2n),
 thead {
     background-color: #fafafa;
-}
+} */
 
 #articleContent table th {
     background-color: #f2f2f2;

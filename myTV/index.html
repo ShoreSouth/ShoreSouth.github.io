@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Categories, hexo,开发,算法">
+    <meta name="keywords" content="myTV, hexo,开发,算法">
     <meta name="description" content="Shore">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -28,7 +28,7 @@
     </style>
 
 
-    <title>Categories | Shore</title>
+    <title>myTV | Shore</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/libs/awesome/css/all.min.css">
@@ -456,170 +456,529 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    subtitle
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-
-
-    </div>
-</div>
-
-<main class="content">
-
-    
-
-<div id="category-cloud" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;Post Categories
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/%E5%BB%BA%E7%AB%99/" title="建站: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">建站
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/QUICK/" title="QUICK: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">QUICK
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">随笔
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/hexo/" title="hexo: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">hexo
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    
     <style type="text/css">
-    #category-radar {
-        width: 100%;
-        height: 360px;
+    /* 渐变背景 */
+    body {
+      background: linear-gradient(to bottom, #B721FF, #2AF598, #fec051, #FEE140, #FA709A);
+      background-size: 100%;
+      background-repeat: no-repeat;
     }
+    
+    body:before {
+      content: '';
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: -1;
+      background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), #21D4FD 75%);
+    }
+    
+    body {
+      margin: 0;
+      font-size: 1.15rem;
+      line-height: 1.4em;
+    }
+    #container {
+    background-color: #FFF;
+    margin: 80px 10%;
+    padding: 30px 60px;
+    border-radius: 20px;
+    box-shadow: 0 3px 26px 0 rgba(0, 0, 0, 0.2);
+    }
+
+
+
+    /* 表格 */
+
+    .gradual {
+    position: relative;
+    left: 10%;
+
+    }
+
+    table {
+    width: 80%;
+    /* background: linear-gradient(45deg, #49a09d, #5f2c82); */
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Background-color of the odd rows */
+    table tr:nth-child(odd) {
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    }
+
+    /* Background-color of the even rows */
+    table tr:nth-child(even) {
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    }
+
+    th,
+    td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    }
+
+    th {
+    text-align: center;
+    }
+
+    thead th {
+    background:linear-gradient(to bottom, #5f2c82, #49a09d);
+    }
+
+    tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    tbody td {
+    position: relative;
+    text-align: center;
+
+    }
+
+    tbody td:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    }
+
+    .gradual td:hover {
+    background-color: aquamarine;
+    color: black;
+    font-weight: bold;
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+    }
+
+    
 </style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="category-radar" class="card-content"></div>
+<div id="container">
+    <h1 style="text-align:center;">
+        📺
+        <span style="color:red;">看</span> 
+        <span style="color:orange;">过</span> 
+        <span style="color:yellow;">的</span>
+        <span style="color:green;">国</span>
+        <span style="color:yellowgreen;">产</span>
+        <span style="color:blue;">片</span>
+
+    </h1>
+    
+    <div class="gradual">
+        <table>
+            <thead>
+                <tr>
+                    <th>片名</th>
+                    <th>类别</th>
+                    <th>首播时间</th>
+                    <th>个人打分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>亮剑</td>
+                    <td>战争</td>
+                    <td>2005</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>开端</td>
+                    <td>剧情</td>
+                    <td>2022</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>爱情公寓</td>
+                    <td>喜剧</td>
+                    <td>2009</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>三国演义</td>
+                    <td>历史</td>
+                    <td>1994</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>水浒传*</td>
+                    <td>历史</td>
+                    <td>1998</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>西游记</td>
+                    <td>玄幻</td>
+                    <td>1986</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>康熙王朝</td>
+                    <td>历史</td>
+                    <td>2001</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>家有儿女#</td>
+                    <td>喜剧</td>
+                    <td>2005</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>人民的名义#</td>
+                    <td>剧情</td>
+                    <td>2017</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>武林外传#</td>
+                    <td>喜剧</td>
+                    <td>2006</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>最好的我们</td>
+                    <td>青春</td>
+                    <td>2016</td>
+                    <td>7</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
+    <h1 style="text-align:center;">
+        📺
+        <span style="color:red;">看</span> 
+        <span style="color:orange;">过</span> 
+        <span style="color:yellow;">的</span>
+        <span style="color:green;">美</span>
+        <span style="color:blue;">剧</span>
+
+    </h1>
+    
+    <div class="gradual">
+        <table>
+            <thead>
+                <tr>
+                    <th>片名</th>
+                    <th>类别</th>
+                    <th>首播时间</th>
+                    <th>个人打分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>权力的游戏</td>
+                    <td>奇幻</td>
+                    <td>2011</td>
+                    <td>8.5→5</td>
+                </tr>
+                <tr>
+                    <td>老友记</td>
+                    <td>喜剧</td>
+                    <td>1994</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>摩登家庭</td>
+                    <td>喜剧</td>
+                    <td>2009</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>绝命毒师</td>
+                    <td>剧情</td>
+                    <td>2008</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>哥谭</td>
+                    <td>犯罪</td>
+                    <td>2014</td>
+                    <td>8→6</td>
+                </tr>
+                <tr>
+                    <td>瑞克和莫蒂</td>
+                    <td>喜剧</td>
+                    <td>2013</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>汉尼拔</td>
+                    <td>剧情</td>
+                    <td>2013</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>不死法医</td>
+                    <td>剧情</td>
+                    <td>2014</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>切尔诺贝利</td>
+                    <td>历史</td>
+                    <td>2019</td>
+                    <td>8.5</td>
+                </tr>
+                <tr>
+                    <td>生活大爆炸#</td>
+                    <td>喜剧</td>
+                    <td>2007</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>小谢尔顿</td>
+                    <td>喜剧</td>
+                    <td>2017</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>破产姐妹#</td>
+                    <td>喜剧</td>
+                    <td>2011</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>黑袍纠察队</td>
+                    <td>动作</td>
+                    <td>2019</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>西部世界*</td>
+                    <td>科幻</td>
+                    <td>2016</td>
+                    <td>7.5→6.5</td>
+                </tr>
+                <tr>
+                    <td>女王的棋局</td>
+                    <td>剧情</td>
+                    <td>2020</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>越狱(仅第一季)</td>
+                    <td>犯罪</td>
+                    <td>2005</td>
+                    <td>8→↓</td>
+                </tr>
+                <tr>
+                    <td>斯巴达克斯#</td>
+                    <td>犯罪</td>
+                    <td>2010</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>爱死亡和机器人#</td>
+                    <td>动画</td>
+                    <td>2019</td>
+                    <td>7.5→7</td>
+                </tr>
+                <tr>
+                    <td>危机边缘#</td>
+                    <td>科幻</td>
+                    <td>2008</td>
+                    <td>7.5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h1 style="text-align:center;">
+        📺
+        <span style="color:red;">看</span> 
+        <span style="color:orange;">过</span> 
+        <span style="color:yellow;">的</span>
+        <span style="color:green;">日</span>
+        <span style="color:blue;">剧</span>
+
+    </h1>
+    
+    <div class="gradual">
+        <table>
+            <thead>
+                <tr>
+                    <th>片名</th>
+                    <th>类别</th>
+                    <th>首播时间</th>
+                    <th>个人打分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>非自然死亡</td>
+                    <td>剧情</td>
+                    <td>2018</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>三年A班</td>
+                    <td>校园</td>
+                    <td>2019</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>李狗嗨#</td>
+                    <td>喜剧</td>
+                    <td>2012</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>我是大哥大</td>
+                    <td>喜剧</td>
+                    <td>2018</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>白色巨塔*</td>
+                    <td>剧情</td>
+                    <td>2003</td>
+                    <td>8</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <h1 style="text-align:center;">
+        📺
+        <span style="color:red;">看</span> 
+        <span style="color:orange;">过</span> 
+        <span style="color:yellow;">的</span>
+        <span style="color:green;">英</span>
+        <span style="color:blue;">剧</span>
+
+    </h1>
+    
+    <div class="gradual">
+        <table>
+            <thead>
+                <tr>
+                    <th>片名</th>
+                    <th>类别</th>
+                    <th>首播时间</th>
+                    <th>个人打分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>浴血黑帮</td>
+                    <td>犯罪</td>
+                    <td>2013</td>
+                    <td>8.5</td>
+                </tr>
+                <tr>
+                    <td>神探夏洛克</td>
+                    <td>犯罪</td>
+                    <td>2010</td>s
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>德雷尔一家</td>
+                    <td>剧情</td>
+                    <td>2016</td>
+                    <td>8</td>
+                </tr>
+                
+                <tr>
+                    <td>性爱自修室</td>
+                    <td>校园</td>
+                    <td>2019</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>是,首相*</td>
+                    <td>喜剧</td>
+                    <td>1986</td>
+                    <td>8</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <h1 style="text-align:center;">
+        📺
+        <span style="color:red;">看</span> 
+        <span style="color:orange;">过</span> 
+        <span style="color:yellow;">的</span>
+        <span style="color:green;">德</span>
+        <span style="color:blue;">剧</span>
+
+    </h1>
+    
+    <div class="gradual">
+        <table>
+            <thead>
+                <tr>
+                    <th>片名</th>
+                    <th>类别</th>
+                    <th>首播时间</th>
+                    <th>个人打分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>暗黑*</td>
+                    <td>玄幻</td>
+                    <td>2017</td>
+                    <td>9</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <h1 style="text-align:center;">
+        📺
+        <span style="color:red;">看</span> 
+        <span style="color:orange;">过</span> 
+        <span style="color:yellow;">的</span>
+        <span style="color:green;">韩</span>
+        <span style="color:blue;">剧</span>
+
+    </h1>
+    
+    <div class="gradual">
+        <table>
+            <thead>
+                <tr>
+                    <th>片名</th>
+                    <th>类别</th>
+                    <th>首播时间</th>
+                    <th>个人打分</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>窥探*</td>
+                    <td>犯罪</td>
+                    <td>2021</td>
+                    <td>8</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    
 </div>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let radarChart = echarts.init(document.getElementById('category-radar'));
 
-    
 
-    let option = {
-        title: {
-            left: 'center',
-            text: 'Post Categories Radar Chart',
-            textStyle: {
-                fontWeight: 500,
-                fontSize: 22
-            }
-        },
-        tooltip: {},
-        radar: {
-            name: {
-                textStyle: {
-                    color: '#3C4858'
-                }
-            },
-            indicator: [{"name":"建站","max":3},{"name":"QUICK","max":3},{"name":"随笔","max":3},{"name":"hexo","max":3}],
-            nameGap: 5,
-            center: ['50%','55%'],
-            radius: '66%'
-        },
-        series: [{
-            type: 'radar',
-            color: ['#3ecf8e'],
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data : [
-                {
-                    value : [2,2,1,1],
-                    name : 'Number of Categories'
-                }
-            ]
-        }]
-    };
-
-    radarChart.setOption(option);
-</script>
-
-    
-
-</main>
 
 
     <footer class="page-footer bg-color">
