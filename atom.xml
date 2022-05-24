@@ -6,7 +6,7 @@
   <link href="https://shoresouth.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://shoresouth.gitee.io/"/>
-  <updated>2022-05-09T07:16:03.016Z</updated>
+  <updated>2022-05-24T14:04:49.412Z</updated>
   <id>https://shoresouth.gitee.io/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>爬取水浒108将座次表并转化markdown表格</title>
+    <link href="https://shoresouth.gitee.io/2022/05/24/pa-qu-shui-hu-108-jiang-zuo-ci-biao-bing-zhuan-hua-markdown-biao-ge/"/>
+    <id>https://shoresouth.gitee.io/2022/05/24/pa-qu-shui-hu-108-jiang-zuo-ci-biao-bing-zhuan-hua-markdown-biao-ge/</id>
+    <published>2022-05-24T12:57:43.000Z</published>
+    <updated>2022-05-24T14:04:49.412Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;获取数据&quot;&gt;&lt;a href=&quot;#获取数据&quot; class=&quot;headerlink&quot; title=&quot;获取数据&quot;&gt;&lt;/a&gt;获取数据&lt;/h3&gt;&lt;p&gt;示例网页：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="大数据" scheme="https://shoresouth.gitee.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    
+    <category term="水浒传" scheme="https://shoresouth.gitee.io/tags/%E6%B0%B4%E6%B5%92%E4%BC%A0/"/>
+    
+    <category term="python" scheme="https://shoresouth.gitee.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>水浒传108将排位</title>
+    <link href="https://shoresouth.gitee.io/2022/05/24/shui-hu-chuan-108-jiang/"/>
+    <id>https://shoresouth.gitee.io/2022/05/24/shui-hu-chuan-108-jiang/</id>
+    <published>2022-05-24T10:01:43.000Z</published>
+    <updated>2022-05-24T14:02:54.301Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;center&quot;&gt;座次&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;姓名&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;诨名&lt;/th&gt;
+&lt;th align=&quot;center&quot;&gt;梁山泊职务&lt;/th&gt;
+&lt;th</summary>
+        
+      
+    
+    
+    
+    <category term="百科" scheme="https://shoresouth.gitee.io/categories/%E7%99%BE%E7%A7%91/"/>
+    
+    
+    <category term="水浒传" scheme="https://shoresouth.gitee.io/tags/%E6%B0%B4%E6%B5%92%E4%BC%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>批量压缩图片</title>
