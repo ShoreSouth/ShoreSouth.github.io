@@ -6,7 +6,7 @@
   <link href="https://shoresouth.gitee.io/atom.xml" rel="self"/>
   
   <link href="https://shoresouth.gitee.io/"/>
-  <updated>2022-05-26T12:19:25.761Z</updated>
+  <updated>2022-05-26T12:35:06.830Z</updated>
   <id>https://shoresouth.gitee.io/</id>
   
   <author>
@@ -21,15 +21,14 @@
     <link href="https://shoresouth.gitee.io/2022/05/26/chou/"/>
     <id>https://shoresouth.gitee.io/2022/05/26/chou/</id>
     <published>2022-05-26T12:09:15.000Z</published>
-    <updated>2022-05-26T12:19:25.761Z</updated>
+    <updated>2022-05-26T12:35:06.830Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;现代版(解码)——&lt;br&gt;《愁》&lt;br&gt;靠在阳台抽烟，&lt;br&gt;我抽一半，风抽一半。&lt;br&gt;我没和风计较，&lt;br&gt;因为风也有自己的忧愁。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;h3 id=&quot;现代诗&quot;&gt;&lt;a href=&quot;#现代诗&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -38,7 +37,7 @@
     <category term="诗词" scheme="https://shoresouth.gitee.io/categories/%E8%AF%97%E8%AF%8D/"/>
     
     
-    <category term="搞笑" scheme="https://shoresouth.gitee.io/tags/%E6%90%9E%E7%AC%91/"/>
+    <category term="emo" scheme="https://shoresouth.gitee.io/tags/emo/"/>
     
   </entry>
   
@@ -64,9 +63,9 @@
     <category term="大数据" scheme="https://shoresouth.gitee.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
     
-    <category term="水浒传" scheme="https://shoresouth.gitee.io/tags/%E6%B0%B4%E6%B5%92%E4%BC%A0/"/>
-    
     <category term="python" scheme="https://shoresouth.gitee.io/tags/python/"/>
+    
+    <category term="水浒传" scheme="https://shoresouth.gitee.io/tags/%E6%B0%B4%E6%B5%92%E4%BC%A0/"/>
     
   </entry>
   
