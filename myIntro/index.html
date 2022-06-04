@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Tag: QUICK, hexo,开发,算法">
+    <meta name="keywords" content="myIntro, hexo,开发,算法">
     <meta name="description" content="Shore">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -28,7 +28,7 @@
     </style>
 
 
-    <title>Tag: QUICK | Shore</title>
+    <title>myIntro | Shore</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/libs/awesome/css/all.min.css">
@@ -459,207 +459,381 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    subtitle
-                
-            </div>
+    <!-- js -->
+function openTab(evt, tab) {
+	var i, tabcontent, tablinks;
+	tabcontent = document.getElementsByClassName("content__inner");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tab");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	}
+	document.getElementById(tab).style.display = "block";
+	evt.currentTarget.className += " active";
+}
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
+//Horizontal scroll for the tabs on mousewheel. If tabs are longer than the content section, there's a scroll bar but it's hidden to retain the design.
+if (window.innerWidth > 800) {
+	const scrollContainer = document.querySelector(".tabs");
+
+	scrollContainer.addEventListener("wheel", (evt) => {
+		evt.preventDefault();
+		scrollContainer.scrollLeft += evt.deltaY;
+	});
+}
+
+
+<!-- css -->
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --background: #f9d877;
+  }
+  
+  body {
+    padding: 4rem 2rem 2rem;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #ad5389, #3c1053);
+    font-size: 1.2rem;
+    font-family: "Patrick Hand";
+    display: grid;
+    grid: 2rem auto/repeat(2, 50%);
+    grid-column-gap: 2rem;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  body .folder {
+    grid-column: 1 / -1;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  .tab {
+    font-family: "Patrick Hand";
+    text-transform: uppercase;
+    line-height: 0.8;
+    display: inline-block;
+    margin-left: -35px;
+    filter: drop-shadow(0px -3px 2px rgba(0, 0, 0, 0.05));
+    border: none;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    margin-right: 4rem;
+    background: var(--background);
+    white-space: nowrap;
+    cursor: pointer;
+    background: var(--background);
+  }
+  
+  .tab:focus {
+    outline: none;
+  }
+  
+  .tab:focus span {
+    border-bottom: 2px solid;
+    border-radius: 0;
+  }
+  
+  .tab:first-of-type {
+    margin-left: 30px;
+  }
+  
+  .tab div {
+    background: var(--background);
+    padding: 6px 0;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .tab span {
+    display: inline-block;
+    border: 2px solid transparent;
+    padding: 6px 15px 6px;
+    border-radius: 5px;
+    z-index: 5;
+    position: relative;
+    font-size: 140%;
+    color: #fff;
+    min-width: 6rem;
+  }
+  
+  .tab:before, .tab:after {
+    content: "";
+    height: 100%;
+    position: absolute;
+    background: var(--background);
+    border-radius: 8px 8px 0 0;
+    width: 30px;
+    top: 0;
+  }
+  
+  .tab:before {
+    right: -16px;
+    transform: skew(25deg);
+    border-radius: 0 8px 0 0;
+  }
+  
+  .tab:after {
+    transform: skew(-25deg);
+    left: -16px;
+    border-radius: 8px 0 0 0;
+  }
+  
+  .tab.active {
+    z-index: 50;
+    position: relative;
+  }
+  
+  .tab.active span {
+    background: white;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: black;
+  }
+  
+  .content {
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .content #tab-1 {
+    display: block;
+  }
+  
+  .content:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+  }
+  
+  .content__inner {
+    font-family: "Yomogi", sans-serif;
+    display: none;
+    background: var(--background);
+    border-radius: inherit;
+    padding: 1rem;
+    filter: drop-shadow(0px -2px 2px rgba(0, 0, 0, 0.1));
+    z-index: 5;
+  }
+  
+  .folder {
+    margin: 1rem auto;
+    max-width: 50rem;
+    width: 100%;
+    -ms-overflow-style: none;
+    /* IE 10+ */
+  }
+  
+  .folder ::-webkit-scrollbar {
+    background: transparent;
+    /* Chrome/Safari/Webkit */
+    display: none;
+  }
+  
+  .page {
+    padding: 1.5rem;
+    border-radius: 2px;
+    min-height: 20rem;
+    line-height: 160%;
+    background-color: #f9f9f9;
+    filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.15));
+    background-image: linear-gradient(#e4e4e4 1px, transparent 1px);
+    background-size: 8% 8%, 2px 2px;
+  }
+  
+  .tabs {
+    padding: 2rem 0 0 0;
+    width: 100%;
+    margin: 0 0.5rem;
+    overflow-x: auto;
+    width: calc(100% - 1rem);
+    white-space: nowrap;
+  }
+  
+  @media (min-width: 50rem) {
+    .tabs {
+      margin: 0 2rem;
+      width: calc(100% - 4rem);
+    }
+  }
+  
+  #solid:checked ~ .folder .tab:nth-of-type(1),
+  #solid:checked ~ .folder .content__inner:nth-of-type(1) {
+    --background: #af4d98;
+  }
+  
+  #solid:checked ~ .folder .tab:nth-of-type(2),
+  #solid:checked ~ .folder .content__inner:nth-of-type(2) {
+    --background: #d66ba0;
+  }
+  
+  #solid:checked ~ .folder .tab:nth-of-type(3),
+  #solid:checked ~ .folder .content__inner:nth-of-type(3) {
+    --background: #e5a9a9;
+  }
+  
+  #solid:checked ~ .folder .tab:nth-of-type(4),
+  #solid:checked ~ .folder .content__inner:nth-of-type(4) {
+    --background: #6cb6bb;
+  }
+  
+  #solid:checked ~ .folder .tab {
+    border: 2px solid;
+    border-width: 2px 0 0;
+  }
+  
+  #solid:checked ~ .folder .tab:before, #solid:checked ~ .folder .tab:after {
+    top: -2px;
+    border-top: 2px solid;
+  }
+  
+  #solid:checked ~ .folder .tab:before {
+    border-right: 2px solid;
+  }
+  
+  #solid:checked ~ .folder .tab:after {
+    border-left: 2px solid;
+  }
+  
+  #solid:checked ~ .folder .tab.active span {
+    border: 2px solid;
+  }
+  
+  #solid:checked ~ .folder .tab.active:focus span {
+    outline: 1px solid rgba(255, 255, 255, 0.7);
+  }
+  
+  #solid:checked ~ .folder .tab:not(.active) {
+    border-bottom: 2px solid;
+  }
+  
+  #solid:checked ~ .folder .tab:not(.active):before, #solid:checked ~ .folder .tab:not(.active):after {
+    box-shadow: 0 1.5px 0 black;
+  }
+  
+  #solid:checked ~ .folder .content {
+    top: -2px;
+    left: -2px;
+  }
+  
+  #solid:checked ~ .folder .content__inner {
+    box-shadow: 0 0 0 1.5px black;
+  }
+  
+  #solid:checked ~ .folder .page {
+    border: 2px solid;
+  }
+  
+  #shadow:checked ~ .folder .tab {
+    --background: linear-gradient(to bottom, #fee9a5, #f9d877);
+  }
+  
+  #shadow:checked ~ .folder .tab span {
+    color: black;
+  }
+  
+  #shadow:checked ~ .folder .tab:focus span {
+    border-bottom-color: black;
+  }
+  
+  #shadow:checked ~ .folder .tab.active:focus span {
+    border-color: black;
+  }
+  
+  #shadow:checked ~ .folder .content__inner {
+    --background: linear-gradient(to bottom, #f9d877, #fee9a5);
+  }
+  
+  /* radio buttons styling */
+  input.variation {
+    display: none;
+  }
+  
+  input.variation + label {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+  }
+  
+  input.variation + label .circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+  
+  input.variation:checked + label .circle {
+    background: white;
+    box-shadow: inset 0 0 0 3px #3c1053;
+  }
+  
+  input.variation:nth-of-type(1) + label {
+    justify-self: flex-end;
+  }
+  
+<!-- html -->
+
+<input class="variation" id="solid" type="radio" value="1" name="border" checked="checked" />
+<label for="solid"><span class="circle"></span><span>Flat UI</span></label>
+<input class="variation" id="shadow" type="radio" value="2" name="border" />
+<label for="shadow"> <span class="circle"></span><span>Realistic</span></label>
+<div class="folder">
+  <div class="tabs">
+    <button class="tab active" onclick="openTab(event, 'tab-1')">
+      <div><span>Work stuff</span></div>
+    </button>
+    <button class="tab" onclick="openTab(event, 'tab-2')">
+      <div><span>Food</span></div>
+    </button>
+    <button class="tab" onclick="openTab(event, 'tab-3')">
+      <div><span>Baking</span></div>
+    </button>
+    <button class="tab" onclick="openTab(event, 'tab-4')">
+      <div><span>Cat</span></div>
+    </button>
+  </div>
+  <div class="content">
+    <div class="content__inner" id="tab-1">
+      <div class="page">
+        <p>Productize. Optics accountable talk. Thought shower. High performance keywords market-facing drink from the firehose, or you better eat a reality sandwich before you walk back in that boardroom, but accountable talk knowledge process outsourcing. </p>
+        <p>What's our go to market strategy? cross functional teams enable out of the box brainstorming nor zeitgeist viral engagement. Deep dive. Organic growth quick sync, feed the algorithm. </p>
+      </div>
     </div>
-</div>
-
-
-<script>
-    $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/medias/banner/0.jpg)');
-</script>
-
-
+    <div class="content__inner" id="tab-2">
+      <div class="page">
+        <p>I love cheese, especially the big cheese gouda. Monterey jack red leicester roquefort cheese and wine fromage frais smelly cheese melted cheese dolcelatte. Fromage smelly cheese manchego paneer cheese and wine danish fontina macaroni cheese red leicester. </p>
+        <p>Stilton fondue queso emmental when the cheese comes out everybody's happy croque monsieur queso paneer. Say cheese pecorino swiss boursin halloumi cottage cheese taleggio boursin. </p>
+      </div>
     </div>
-</div>
-
-<main class="content">
-
-    
-
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;Post Tags
-            </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/markdown/" title="markdown: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="markdown" style="background-color: #F9EBEA;">markdown
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/QUICK/" title="QUICK: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="QUICK" style="background-color: #F5EEF8;">QUICK
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/WIN10/" title="WIN10: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="WIN10" style="background-color: #D5F5E3;">WIN10
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/hexo/" title="hexo: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="hexo" style="background-color: #E8F8F5;">hexo
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/emo/" title="emo: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="emo" style="background-color: #FEF9E7;">emo
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/python/" title="python: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="python" style="background-color: #F8F9F9;">python
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E6%B0%B4%E6%B5%92%E4%BC%A0/" title="水浒传: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="水浒传" style="background-color: #82E0AA;">水浒传
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-            </div>
-        </div>
+    <div class="content__inner" id="tab-3">
+      <div class="page">
+        <p>Cupcake ipsum dolor sit amet jujubes tart. Tiramisu icing gingerbread halvah cake. Marzipan cake soufflé cookie brownie ice cream cupcake. Dragée croissant bonbon ice cream oat cake jelly cookie. Wafer candy dessert jelly jelly-o. </p>
+        <p>Oat cake donut powder pastry wafer brownie cupcake caramels bear claw. Bonbon caramels oat cake cake shortbread. Cake cheesecake candy icing bear claw marshmallow icing jelly. Halvah biscuit pudding danish cookie bonbon gummies.</p>
+      </div>
     </div>
+    <div class="content__inner" id="tab-4">
+      <div class="page">
+        <p>Miaow then turn around and show you my bum flee in terror at cucumber discovered on floor. Terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry sleep on dog bed, force dog to sleep on floor and grab pompom in mouth and put in water dish cats are fats i like to pets them they like to meow back present belly, scratch hand when stroked. </p>
+        <p>Bleghbleghvomit my furball really tie the room together love asdflkjaertvlkjasntvkjn (sits on keyboard) but bawl under human beds.</p>
+      </div>
+    </div>
+  </div>
 </div>
-
-    
-
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="QUICK, python" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2022/05/09/pi-liang-ya-suo-tu-pian/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/comment_bg.png" data-original="https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="批量压缩图片">
-                            
-                            <span class="card-title">批量压缩图片</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-09
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/QUICK/" class="post-category">
-                                QUICK
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="QUICK, WIN10" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2022/05/05/quick-tu-pian-chong-ming-ming/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/comment_bg.png" data-original="https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/medias/featureimages/3.jpg" class="responsive-img" alt="QUICK——图片重命名">
-                            
-                            <span class="card-title">QUICK——图片重命名</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-05
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/QUICK/" class="post-category">
-                                QUICK
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </article>
-</main>
-
-
-
 
     <footer class="page-footer bg-color">
     
