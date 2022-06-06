@@ -136,17 +136,6 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友链</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
     <a href="" class="waves-effect waves-light">
 
       
@@ -172,6 +161,24 @@
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>动漫</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/myMoive">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>电影</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/myBook">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>书单</span>
         </a>
       </li>
       
@@ -305,17 +312,6 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友链
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
 		<a href="javascript:;">
 			
 				<i class="fa-fw fas fa-list"></i>
@@ -342,6 +338,26 @@
 				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
 			      
 		          <span>动漫</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/myMoive " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>电影</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/myBook " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>书单</span>
                   </a>
                 </li>
               
@@ -476,7 +492,7 @@ function openTab(evt, tab) {
 }
 
 if (window.innerWidth > 800) {
-	const scrollContainer = document.querySelector(".tabs");
+	const scrollContainer = document.querySelector(".mytabs");
 
 	scrollContainer.addEventListener("wheel", (evt) => {
 		evt.preventDefault();
@@ -488,29 +504,35 @@ if (window.innerWidth > 800) {
 
 <!-- css -->
 <style type="text/css">
-* {
-    box-sizing: border-box;
+
+/* 渐变背景 */
+body {
+      background: linear-gradient(to bottom, #B721FF, #2AF598, #fec051, #FEE140, #FA709A);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    
+    body:before {
+      content: '';
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: -1;
+      background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), #21D4FD 75%);
+    }
+    
+    body {
+      margin: 0;
+      font-size: 1.15rem;
+      line-height: 1.4em;
+    }  
+    * {
+  box-sizing: border-box;
 }
-  
+
 :root {
   --background: #f9d877;
-}
-
-body {
-  padding: 4rem 2rem 2rem;
-  min-height: 100vh;
-  background: linear-gradient(to bottom right, #ad5389, #3c1053);
-  font-size: 1.2rem;
-  font-family: "Patrick Hand";
-  display: grid;
-  grid: 2rem auto/repeat(2, 50%);
-  grid-column-gap: 2rem;
-  justify-content: center;
-  width: 100%;
-}
-
-body .folder {
-  grid-column: 1 / -1;
 }
 
 p {
@@ -600,17 +622,17 @@ p {
   color: black;
 }
 
-.content {
+.mycontent {
   border-radius: 10px;
   position: relative;
   width: 100%;
 }
 
-.content #tab-1 {
+.mycontent #tab-1 {
   display: block;
 }
 
-.content:before {
+.mycontent:before {
   content: "";
   width: 100%;
   height: 100%;
@@ -656,7 +678,7 @@ p {
   background-size: 8% 8%, 2px 2px;
 }
 
-.tabs {
+.mytabs {
   padding: 2rem 0 0 0;
   width: 100%;
   margin: 0 0.5rem;
@@ -666,7 +688,7 @@ p {
 }
 
 @media (min-width: 50rem) {
-  .tabs {
+  .mytabs {
     margin: 0 2rem;
     width: calc(100% - 4rem);
   }
@@ -740,7 +762,7 @@ p {
 }
 
 #shadow:checked ~ .folder .tab {
-  --background: linear-gradient(to bottom, #fee9a5, #f9d877);
+  --background: linear-gradient(to bottom, turquoise, #2AF598);
 }
 
 #shadow:checked ~ .folder .tab span {
@@ -756,15 +778,15 @@ p {
 }
 
 #shadow:checked ~ .folder .content__inner {
-  --background: linear-gradient(to bottom, #f9d877, #fee9a5);
+  --background: linear-gradient(to bottom, #2AF598, turquoise);
 }
 
 /* radio buttons styling */
-input.variation {
+input.myvariation {
   display: none;
 }
 
-input.variation + label {
+input.myvariation + label {
   display: flex;
   column-gap: 10px;
   align-items: center;
@@ -772,70 +794,121 @@ input.variation + label {
   color: white;
 }
 
-input.variation + label .circle {
+input.myvariation + label .mycircle {
   width: 25px;
   height: 25px;
   border-radius: 50%;
   border: 3px solid white;
 }
 
-input.variation:checked + label .circle {
+input.myvariation:checked + label .mycircle {
   background: white;
   box-shadow: inset 0 0 0 3px #3c1053;
 }
 
-input.variation:nth-of-type(1) + label {
+input.myvariation:nth-of-type(1) + label {
   justify-self: flex-end;
 }
+
 </style>  
 <!-- html -->
 
-<input class="variation" id="solid" type="radio" value="1" name="border" checked="checked" />
-<label for="solid"><span class="circle"></span><span>Flat UI</span></label>
-<input class="variation" id="shadow" type="radio" value="2" name="border" />
-<label for="shadow"> <span class="circle"></span><span>Realistic</span></label>
+<input class="myvariation" id="solid" type="radio" value="1" name="border" checked="checked" />
+<label for="solid"><span class="mycircle"></span><span>Colorful</span></label>
+<input class="myvariation" id="shadow" type="radio" value="2" name="border" />
+<label for="shadow"> <span class="mycircle"></span><span>Simple</span></label>
 <div class="folder">
-  <div class="tabs">
+  <div class="mytabs">
     <button class="tab active" onclick="openTab(event, 'tab-1')">
-      <div><span>Work stuff</span></div>
+      <div><span>（一）</span></div>
     </button>
     <button class="tab" onclick="openTab(event, 'tab-2')">
-      <div><span>Food</span></div>
+      <div><span>（二）</span></div>
     </button>
     <button class="tab" onclick="openTab(event, 'tab-3')">
-      <div><span>Baking</span></div>
+      <div><span>（三）</span></div>
     </button>
     <button class="tab" onclick="openTab(event, 'tab-4')">
-      <div><span>Cat</span></div>
+      <div><span>（四）</span></div>
     </button>
   </div>
-  <div class="content">
+  <div class="mycontent">
     <div class="content__inner" id="tab-1">
       <div class="page">
-        <p>Productize. Optics accountable talk. Thought shower. High performance keywords market-facing drink from the firehose, or you better eat a reality sandwich before you walk back in that boardroom, but accountable talk knowledge process outsourcing. </p>
-        <p>What's our go to market strategy? cross functional teams enable out of the box brainstorming nor zeitgeist viral engagement. Deep dive. Organic growth quick sync, feed the algorithm. </p>
+        <p>星座：天蝎</p>
+        <p>MBTI人格测试：指挥官型人格 ENTJ-A (不准，离谱)</p>
+        <p>精神：外向型53%←→内向型47%</p>
+        <p>精力：直觉型63%←→现实型37%</p>
+        <p>本性：逻辑型51%←→感受型47%</p>
+        <p>对策：计划型54%←→展望型46%</p>
+        <p>特性：坚决72%←→谨慎28%</p>
+        <br>
+        <p>理念：躺平</p>
+        <p>擅长：CRTL A + CRTL C + CRTL V</p>
+        <p>好动，亦喜静</p>
+        <p></p>
       </div>
     </div>
     <div class="content__inner" id="tab-2">
       <div class="page">
-        <p>I love cheese, especially the big cheese gouda. Monterey jack red leicester roquefort cheese and wine fromage frais smelly cheese melted cheese dolcelatte. Fromage smelly cheese manchego paneer cheese and wine danish fontina macaroni cheese red leicester. </p>
-        <p>Stilton fondue queso emmental when the cheese comes out everybody's happy croque monsieur queso paneer. Say cheese pecorino swiss boursin halloumi cottage cheese taleggio boursin. </p>
+        <p>喜欢打篮球（将近一年没摸球了）</p>
+        <p>喜欢打羽毛球（将近半年没打了）</p>
+        <p>喜欢打乒乓球（三四年没碰了）</p>
+        <p>（其实啥户外运动都喜欢）</p>
+        <p>喜欢打游戏（这个确实天天做）</p>
+        <p>每天花10分钟练腹肌，接近一年了，影子都没见到</p>
+        <p>不太喜欢跑步，一年加起来不超10次</p>
+        <p>偶尔做HIIT运动，然而体重稳中有升，现已升至73Kg</p>
+        <p>喜欢看电影，啥类型都爱看，除了恐怖片（但是喜欢惊悚片）</p>
+        <p>喜欢看剧，啥类型都爱看，最近更爱看喜剧多一点</p>
+        <p>喜欢转笔，买了几支花里胡哨的🖊后一直放角落吃灰</p>
+        <p>喜欢花切，买了几副花里胡哨的牌后一直放角落吃灰</p>
+        <p>不喜欢写作，初高中最头疼写作文，简直坐牢，建了这个网站后，希望能激发写作的热情</p>
       </div>
     </div>
     <div class="content__inner" id="tab-3">
       <div class="page">
-        <p>Cupcake ipsum dolor sit amet jujubes tart. Tiramisu icing gingerbread halvah cake. Marzipan cake soufflé cookie brownie ice cream cupcake. Dragée croissant bonbon ice cream oat cake jelly cookie. Wafer candy dessert jelly jelly-o. </p>
-        <p>Oat cake donut powder pastry wafer brownie cupcake caramels bear claw. Bonbon caramels oat cake cake shortbread. Cake cheesecake candy icing bear claw marshmallow icing jelly. Halvah biscuit pudding danish cookie bonbon gummies.</p>
+        
+        <p>喜欢的电影：太多啦，e.g.,让子弹飞、肖申克的救赎、西西里的美丽传说、速度与激情、三傻大闹宝莱坞、碟中谍、哈利波特、千与千寻、你的名字、唐人街探案、釜山行、星际穿越、七宗罪、看不见的客人...（未来在“回忆录-电影”更新）</p>
+        <p>喜欢的电视剧：太多啦，e.g.,请回答1988、权力的游戏、非自然死亡、亮剑、哥谭、摩登家庭、老友记、汉尼拔、浴血黑帮...(更多在“回忆录-电视剧”查看)</p>
+        <p>喜欢的动漫：太多啦，e.g.,瑞克和莫蒂、秦时明月、鬼灭之刃、中华小子、海贼王、进击的巨人(除结尾)、双城之战...(更多在“回忆录-动漫”查看)</p>
+        <p>喜欢的书籍：三体、龙族、笑傲江湖、无人生还、诛仙...(更多在“回忆录-书单”查看)</p>
+        <p>喜欢的影星：莱昂纳多、汤姆·克鲁斯、石原里美、莫妮卡·贝鲁奇、希斯·莱杰、杰森·斯坦森、成龙、王宝强、姜文、吴京、章子怡、李沁、阿尔米·汗、卡梅隆·莫纳汉、安娜贝拉·沃丽丝、斯嘉丽·约翰逊、凯拉·奈特莉、娜塔莉·波特曼、盖尔·加朵...</p>
+        <p>喜欢的歌手：周杰伦、林俊杰、吴克群、王力宏、蔡依林、邓紫棋、刘德华、张学友、陈奕迅、林肯公园、贾斯汀·比伯、泰勒·斯威夫特、The Chainsmokers...</p>
+        <p>喜欢的NBA球星：东契奇、詹姆斯、库里</p>
+        <p>喜欢的导演：克里斯托弗·诺兰、吴京、姜文、詹姆斯·卡梅隆...</p>
+        <p>喜欢的电影角色：张牧之、小丑(黑暗骑士)、迈克·柯里昂、杰克·斯帕罗、小弗兰克·阿巴格诺、伊森·亨特、蝙蝠侠、钢铁侠、黑寡妇、伊丽莎白·斯旺、玛蒂尔达、赫敏(强调:是角色，不是女演员如今的样子)...</p>
+        <p>喜欢的电视剧角色：李云龙、小丑杰罗姆、汉尼拔、夏洛特、莫妮卡·盖勒、菲尔·邓菲、克莱尔·邓菲、唐悠悠、成德善、刘东龙、沃尔特·怀特、索尔·古德曼、瑟琳娜·凯尔、三澄美琴、汤米·谢尔比、格雷斯、夏洛克、柊一飒、赤坂理子...</p>
+        <p>喜欢的动漫角色：鹿丸、宇智波鼬、索隆、云雀恭弥、坂田银时、露西·哈特菲利亚、灶门炭治郎、灶门祢豆子、利威尔·阿克曼...</p>
+        <p>喜欢的小说角色：罗辑、章北海、小龙女、任盈盈、令狐冲、杨过、碧瑶、张小凡、 夏弥、陈墨瞳、楚子航...</p>
+        <p>讨厌的角色：郭芙(侠之巨婴)、岳不群、程心、尹志平、谢尔顿、斯凯勒·怀特、光月桃之助、黑胡子、胡万、乌姆里奇、杰罗麦、范闲、祖国人...</p>
+        
       </div>
     </div>
     <div class="content__inner" id="tab-4">
       <div class="page">
-        <p>Miaow then turn around and show you my bum flee in terror at cucumber discovered on floor. Terrorize the hundred-and-twenty-pound rottweiler and steal his bed, not sorry sleep on dog bed, force dog to sleep on floor and grab pompom in mouth and put in water dish cats are fats i like to pets them they like to meow back present belly, scratch hand when stroked. </p>
-        <p>Bleghbleghvomit my furball really tie the room together love asdflkjaertvlkjasntvkjn (sits on keyboard) but bawl under human beds.</p>
+        <p>喜欢的颜色：都挺喜欢的</p>
+        <p>喜欢的动物(传说中的)：龙、凤凰、独角兽、麒麟(排名不分先后)</p>
+        <p>喜欢的动物(真实存在的)：鹿、熊猫、老虎(排名分先后)</p>
+        <p>诸子百家最喜欢：道家——道法自然、无为自化、应物变化 (与躺平理念最接近)</p>
+        <p>最崇拜的人：教员</p>
+        <p>三国中最喜欢：诸葛亮、赵云、曹操、刘备、姜维</p>
+        <p>三国中最鄙视：董卓、孙权、吕布</p>
+        <p>水浒传最喜欢：武松、林冲、公孙胜</p>
+        <p>水浒传最鄙视：宋江、西门庆、高俅</p>
+        <p>古代君主喜欢：李世民、朱元璋、刘邦、成吉思汗</p>
+        <p>古代君主喜欢又不喜欢：秦始皇、乾隆</p>
+        <p>喜欢的诗人：李煜、李白、陶渊明 (与躺平理念最接近)；杜甫、苏轼、王维、白居易...</p>
+        <p>最喜欢的诗词：沁园春·雪</p>
+        <p>喜欢的历史人物：姜子牙、张良、花木兰、貂蝉、韩信、岳飞、秦琼、刘伯温</p>
+        <p>最讨厌的历史人物：慈禧(独一档)、宋徽宗、赵高、秦桧</p>
+        <p>听过的最“脑溢血”的话：“宁予友邦，不赠家奴”——慈禧；</p>
       </div>
     </div>
   </div>
 </div>
+
+
 
     <footer class="page-footer bg-color">
     

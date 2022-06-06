@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Category: 大数据, hexo,开发,算法">
+    <meta name="keywords" content="myMoive, hexo,开发,算法">
     <meta name="description" content="Shore">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -28,7 +28,7 @@
     </style>
 
 
-    <title>Category: 大数据 | Shore</title>
+    <title>myMoive | Shore</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/libs/awesome/css/all.min.css">
@@ -136,17 +136,6 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友链</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
     <a href="" class="waves-effect waves-light">
 
       
@@ -172,6 +161,24 @@
           <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
           
           <span>动漫</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/myMoive">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>电影</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/myBook">
+          
+          <i class="fas fa-film" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>书单</span>
         </a>
       </li>
       
@@ -305,17 +312,6 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友链
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
 		<a href="javascript:;">
 			
 				<i class="fa-fw fas fa-list"></i>
@@ -342,6 +338,26 @@
 				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
 			      
 		          <span>动漫</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/myMoive " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>电影</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/myBook " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-film" style="position: absolute;left:50px" ></i>
+			      
+		          <span>书单</span>
                   </a>
                 </li>
               
@@ -459,197 +475,189 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    subtitle
-                
-            </div>
+    <style type="text/css">
+    /* 渐变背景 */
+    body {
+      background: linear-gradient(to bottom, #B721FF, #2AF598, #fec051, #FEE140, #FA709A);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    
+    body:before {
+      content: '';
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: -1;
+      background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.2), #21D4FD 75%);
+    }
+    
+    body {
+      margin: 0;
+      font-size: 1.15rem;
+      line-height: 1.4em;
+    }
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
+    /* 表格 */
 
+    .gradual {
+    position: relative;
+    left: 10%;
 
-<script>
-    $('.bg-cover').css('background-image', 'url(https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/medias/banner/0.jpg)');
-</script>
+    }
 
+    table {
+    width: 80%;
+    /* background: linear-gradient(45deg, #49a09d, #5f2c82); */
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
 
-    </div>
-</div>
+    /* Background-color of the odd rows */
+    table tr:nth-child(odd) {
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    }
+
+    /* Background-color of the even rows */
+    table tr:nth-child(even) {
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    }
+
+    th,
+    td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    }
+
+    th {
+    text-align: center;
+    }
+
+    thead th {
+    background:linear-gradient(to bottom, #5f2c82, #49a09d);
+    }
+
+    tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    tbody td {
+    position: relative;
+    text-align: center;
+
+    }
+
+    tbody td:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    }
+
+    .gradual td:hover {
+    background-color: aquamarine;
+    color: black;
+    font-weight: bold;
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+    }
+
+@media only screen and (max-width: 601px) {
+    .movies-w {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .movies-h {
+        height: 90%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+}
+
+/*中等屏幕下(平板类)的样式*/
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+    .movies-w {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .movies-h {
+        height: 95%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+}
+@media only screen and (min-width: 993px) {
+    .movies-w {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .movies-h {
+        height: 80%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+}
+</style>
 
 <main class="content">
+    <div id="category-cloud" class="container chip-container">
+        <div class="card">
+            <div class="card-content">
+                <h1 style="text-align:center;">
+                    📺
+                    <span style="color:red;">L</span> 
+                    <span style="color:orange;">O</span> 
+                    <span style="color:yellow;">A</span>
+                    <span style="color:green;">D</span>
+                    <span style="color:yellowgreen;">I</span>
+                    <span style="color:paleturquoise;">N</span>
+                    <span style="color:blue;">G</span>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>太难了，回忆不过来了</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
 
-    
+                </h1>
+                
 
-<div id="category-cloud" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;Post Categories
-            </div>
-            <div class="tag-chips">
-                
-                
-                
-                <a href="/categories/QUICK/" title="QUICK: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">QUICK
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E9%9A%8F%E7%AC%94/" title="随笔: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F5EEF8;">随笔
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/hexo/" title="hexo: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">hexo
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E5%BB%BA%E7%AB%99/" title="建站: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #E8F8F5;">建站
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E8%AF%97%E8%AF%8D/" title="诗词: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #FEF9E7;">诗词
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" title="大数据: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #F8F9F9;">大数据
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/%E7%99%BE%E7%A7%91/" title="百科: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #82E0AA;">百科
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
+
             </div>
         </div>
     </div>
-</div>
-
-
-    
-
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/05/24/pa-qu-shui-hu-108-jiang-zuo-ci-biao-bing-zhuan-hua-markdown-biao-ge/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/comment_bg.png" data-original="https://cdn.jsdelivr.net/gh/ShoreSouth/ShoreSouth.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="爬取水浒108将座次表并转化markdown表格">
-                            
-                            <span class="card-title">爬取水浒108将座次表并转化markdown表格</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                前言给自己出的一道小练习，整理一些python处理文件、修改字符串中常用的函数。
-获取数据示例网页：《水浒传》梁山108将信息对照表(按尊卑座次排名)右键查看网页源代码，复制html内容另存为txt文件，至此得到html表格。
-//txt文
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-24
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
-                                    大数据
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python/">
-                            <span class="chip bg-color">python</span>
-                        </a>
-                        
-                        <a href="/tags/%E6%B0%B4%E6%B5%92%E4%BC%A0/">
-                            <span class="chip bg-color">水浒传</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
-    </article>
 </main>
-
-
 
 
     <footer class="page-footer bg-color">
